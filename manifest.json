@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "ChessFetch",
+  "description": "Gets data from your current chess match on chess.com",
+  "version": "1.0",
+  "author": "Maddox Schmidlkofer",
+  "icons": {
+    "16": "assets/images/icons/duck16.png",
+    "32": "assets/images/icons/duck32.png",
+    "48": "assets/images/icons/duck48.png",
+    "128": "assets/images/icons/duck128.png"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "main.js"
+      ],
+      "matches": [
+        "https://*.chess.com/*"
+      ]
+    }
+  ]
+}
