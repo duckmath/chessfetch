@@ -1,3 +1,12 @@
+/*
+simple webclient class that connects to a websocket server
+
+params:
+
+
+    host: the host of the websocket server
+    port: the port of the websocket server
+ */
 class WebClient {
     constructor(host, port) {
         console.log("WebClient created")
