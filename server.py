@@ -7,11 +7,15 @@ async def echo(websocket):
         try:
 
             data = await websocket.recv()
-            print("Received: " + data)
+
+            data = data.split(",")
+            data.pop()
+            print("Received: ", data)
             # update_board(data) do whatever u want with the data
             await websocket.send("received")
-        except:
+        except Exception as e:
             print("Connection close or error")
+            print(e)
             break
 
 
