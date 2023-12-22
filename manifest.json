@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "ChessFetch",
-  "description": "Gets data from your current chess match on chess.com",
-  "version": "1.0",
+  "description": "Gets and parses data from your current chess match on chess.com",
+  "version": "0.1",
     "permissions": [
         "storage"
     ],
@@ -27,7 +27,7 @@
     "128": "assets/images/icons/duck128.png"
   },
   "background": {
-    "service_worker": "server.js"
+    "service_worker": "chessClient.js"
   },
   "content_scripts": [
     {
