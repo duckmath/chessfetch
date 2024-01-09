@@ -1,6 +1,6 @@
 import websockets
 import asyncio
-
+import time
 
 async def echo(websocket):
     while True:
@@ -11,6 +11,7 @@ async def echo(websocket):
             data = data.split(",")
             data.pop()
             print("Received: ", data)
+            time.sleep(1)
             # update_board(data) do whatever u want with the data
             await websocket.send("received")
         except Exception as e:
@@ -20,7 +21,7 @@ async def echo(websocket):
 
 
 async def main(host, port):
-
+    print("waiting for client")
     await websockets.serve(echo, host, port)
     await asyncio.Future()  # run forever
 

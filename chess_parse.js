@@ -20,7 +20,7 @@ function findPieces(){
         }
     }
     console.log(piecesString)
-    chrome.storage.local.set({ ChessFetchCurrentBoardData: piecesString});
+    chrome.storage.local.set({ ChessFetchCurrentBoardData: piecesString}); // TODO failed setting the data a certain way
 }
 
 function getChessboard(){
