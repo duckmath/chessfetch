@@ -63,7 +63,7 @@ function event_loop() {
                 socket.connect();
                 chrome.storage.local.set({ ChessFetchHost: "old" });
                 chrome.storage.local.set({ ChessFetchPort: 0 });
-                socket.setMessage(result.ChessFetchCurrentBoardData)
+                socket.setMessage(result.ChessFetchCurrentBoardData) // is not sending updated board correctly
 
             }
             else{
@@ -78,7 +78,7 @@ function event_loop() {
 }
 chrome.storage.local.set({ ChessFetchHost: "old" });
 chrome.storage.local.set({ ChessFetchPort: 0 });
-chrome.storage.local.set({ ChessFetchCurrentBoardData: "" });
+chrome.storage.local.set({ ChessFetchCurrentBoardData: "NoData" });
 
 console.log("ChessFetch Launched");
 event_loop();
